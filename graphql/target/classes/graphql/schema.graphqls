@@ -1,0 +1,46 @@
+type Query{
+    allBooks: [Book]
+    findByTitle(title: String): Book
+    findOne(id: ID!):Book
+    allAuthors: [Author]
+    findAuthorByName(name: String): Author
+    findAuthorById(id: ID!): Author
+    findBooksWithPagesGreaterThan(pages: Int): [Book]
+}
+type Mutation{
+    createBook(title: String,pages: Int,author: String): Book
+    addBook(book: BookInput): Book
+    batchCreate(books: [BookInput!]!): [Book]
+}
+
+type Book {
+    id: ID!
+    title: String
+    pages: Int
+    author: String
+    rating: Rating
+    reviews: [Review]
+}
+
+type Review {
+    id: ID!
+    title: String
+    comment: String
+}
+
+type Rating {
+    rating: String
+    star: String
+}
+
+type Author {
+    id: ID!
+    firstName: String
+    lastName: String
+}
+
+input BookInput{
+    title: String
+    pages: Int
+    author: String
+}
