@@ -112,8 +112,14 @@ pages
 
 ![img_5.png](img_5.png)
 
+
 ### H2 Book table screenshot
 ![img_3.png](img_3.png)
 
 ### Review table screenshot
 ![img_4.png](img_4.png)
+
+### References
+https://www.danvega.dev/blog/2023/03/20/graphql-mutations
+
+https://www.danvega.dev/blog/2022/05/17/spring-for-graphql/
